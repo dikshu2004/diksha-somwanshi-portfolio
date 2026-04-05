@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diksha Somwanshi | Web Developer & Engineering Student</title>
+    <meta
+      name="description"
+      content="Portfolio of Diksha Somwanshi — final-year Computer Engineering student specializing in full-stack web development, accessibility, and data-informed products."
+    />
+    <meta name="theme-color" content="#070916" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      document.documentElement.classList.add("welcome-html-lock");
+    </script>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="welcome-splash welcome-splash--visible welcome-splash--progress" id="welcomeSplash" aria-hidden="true">
+      <div class="welcome-splash__veil" aria-hidden="true"></div>
+      <div class="welcome-splash__inner">
+        <div class="welcome-splash__panel glass-panel">
+          <p class="welcome-splash__eyebrow">Welcome to</p>
+          <div class="welcome-splash__title-row">
+            <h2 class="welcome-splash__title" id="welcomeSplashTitle"></h2>
+            <span class="welcome-splash__cursor" id="welcomeSplashCursor" aria-hidden="true"></span>
+          </div>
+          <div class="welcome-splash__track" aria-hidden="true">
+            <div class="welcome-splash__fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <div class="ambient" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="gridlines"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header-wrap">
+        <div class="header-bar glass-panel">
+          <div class="header-inner">
+            <a class="brand brand--code" href="#top" aria-label="Diksha Somwanshi — home">
+              <span class="brand-code" aria-hidden="true"
+                ><span class="brand-code__b">&lt;</span><span class="brand-code__ds">DS</span
+                ><span class="brand-code__b"> /&gt;</span></span
+              >
+            </a>
+
+            <nav class="nav" aria-label="Primary navigation">
+              <a href="#top">Home</a>
+              <a href="#about">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#education">Education</a>
+              <a href="#experience">Experience</a>
+              <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+              <a
+                class="icon-btn header-icon-link"
+                href="https://github.com/dikshu2004"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path
+                      d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.8 2.4 3.5 1.7.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-6a4.6 4.6 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17.8 4 18.8 4.3 18.8 4.3a4.3 4.3 0 0 1 .1 3.1 4.6 4.6 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a
+                class="icon-btn header-icon-link"
+                href="https://www.linkedin.com/in/diksha-somwanshi-097809257"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path
+                      d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.33V9h3.42v1.56h.05c.48-.9 1.65-1.86 3.39-1.86 3.63 0 4.3 2.39 4.3 5.5v6.25ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45V9h3.56v11.45H3.56Z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <button class="icon-btn" id="themeBtn" type="button" aria-pressed="false" title="Toggle theme">
+                <span class="sr-only">Toggle theme</span>
+                <span class="icon" aria-hidden="true" id="themeIcon"></span>
+              </button>
+              <button
+                class="icon-btn menu-toggle"
+                id="menuBtn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                <span class="sr-only">Open menu</span>
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" hidden>
+          <div class="mobile-menu-inner">
+            <a href="#top" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#education" class="mobile-link">Education</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="resume.pdf" class="mobile-link mobile-link-accent" id="resumeBtnMobile">Download résumé</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero hero--reference" aria-labelledby="hero-heading">
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <div class="container hero-centered">
+          <div class="reveal hero-centered__inner">
+            <p class="hero-hello-world"><span aria-hidden="true">👋 </span>HELLO, WORLD!</p>
+
+            <h1 class="hero-title hero-title--center" id="hero-heading">
+              <span class="hero-name">Diksha Somwanshi</span>
+            </h1>
+
+            <p class="hero-tagline">Computer Engineering Student · Full Stack Web Developer</p>
+            <p class="hero-subtag">
+              Problem solver · DSA · MERN &amp; Java stacks · Accessibility-focused builds
+            </p>
+
+            <p class="hero-micro">
+              Final-year B.E. · CGPA <strong>9.40</strong> · Sanghavi College of Engineering · Open to roles
+            </p>
+
+            <p class="hero-typed-line" aria-live="polite">
+              <span class="hero-typed-label">I build</span>
+              <span class="hero-typed" id="typedWrap">
+                <span id="typedText"></span><span class="typed-cursor" aria-hidden="true"></span>
+              </span>
+            </p>
+
+            <div class="cta-row cta-row--hero">
+              <a class="btn btn-hero-primary" href="#projects">
+                View Projects
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                </svg>
+              </a>
+              <a class="btn ghost btn-hero-secondary" href="resume.pdf" id="resumeBtn">
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12M8 11l4 4 4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Download Résumé
+              </a>
+              <a class="btn ghost btn-hero-secondary" href="#contact">
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 6h16v12H4z" stroke-linejoin="round" />
+                  <path d="m4 7 8 6 8-6" stroke-linejoin="round" />
+                </svg>
+                Contact Me
+              </a>
+            </div>
+
+            <p class="hero-footer-links">
+              <a href="mailto:dikshasomwanshi24@gmail.com">Email</a>
+              <span class="hero-footer-dot" aria-hidden="true"></span>
+              <a href="https://github.com/dikshu2004" target="_blank" rel="noreferrer">GitHub</a>
+              <span class="hero-footer-dot" aria-hidden="true"></span>
+              <a href="https://www.linkedin.com/in/diksha-somwanshi-097809257" target="_blank" rel="noreferrer">LinkedIn</a>
+              <span class="hero-footer-dot" aria-hidden="true"></span>
+              <button type="button" class="hero-copy-email" id="copyEmailBtn">Copy email</button>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="about-intro reveal glass-panel about-intro-panel">
+            <div class="section-head section-head--tight">
+              <h2 id="about-heading">About</h2>
+              <p class="section-eyebrow">How I work</p>
+            </div>
+            <div class="about-copy">
+              <p>
+                I’m a final-year Computer Engineering student with a <strong>9.40 CGPA</strong> and a track record of
+                shipping real software—not just tutorials. From responsive customer-facing UIs to servlet-backed services
+                and relational data layers, I enjoy owning features across the stack and validating them with solid API
+                testing and disciplined version control.
+              </p>
+              <p>
+                My current build, <strong>SensiQ</strong>, reflects where I’m headed: inclusive product design powered by
+                the MERN stack, voice interfaces, and thoughtful accessibility. I’m equally comfortable analyzing
+                datasets and dashboards—recently through a <strong>Deloitte Australia</strong> virtual experience in data
+                analytics and Tableau—to connect engineering work with business-ready insight.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="skills-heading">Skills</h2>
+            <p class="muted">
+              Grouped by discipline—hover category cards for a quick read on how I apply each area in practice.
+            </p>
+          </div>
+          <div class="skill-categories" id="skillCategories" aria-label="Skills by category"></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="projects-heading">Projects</h2>
+            <p class="muted">
+              Selected work spanning production-style delivery and an in-progress accessibility platform. Open a card for
+              detail, tech stack, and links when available.
+            </p>
+          </div>
+          <div class="project-grid" id="projectGrid" aria-label="Project cards"></div>
+        </div>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="education-heading">Education</h2>
+            <p class="muted">Academic foundation and credentials that complement hands-on engineering.</p>
+          </div>
+          <div class="timeline-edu reveal">
+            <article class="timeline-card glass-panel">
+              <div class="timeline-card__meta">
+                <span class="timeline-pill">2022 — 2026</span>
+                <span class="timeline-pill timeline-pill--accent">CGPA 9.40</span>
+              </div>
+              <h3 class="timeline-card__title">B.E. in Computer Engineering</h3>
+              <p class="timeline-card__org">Sanghavi College of Engineering</p>
+              <p class="muted timeline-card__desc">
+                Rigorous coursework in computing fundamentals, software systems, and problem-solving—balanced with
+                intensive project work across web stacks, databases, and deployment.
+              </p>
+            </article>
+            <article class="timeline-card glass-panel timeline-card--cert">
+              <div class="timeline-card__meta">
+                <span class="timeline-pill">Apr 2026</span>
+                <span class="timeline-pill">Forage</span>
+              </div>
+              <h3 class="timeline-card__title">Deloitte Australia — Data Analytics Virtual Experience</h3>
+              <p class="timeline-card__org">Simulation &amp; job-relevant tasks</p>
+              <ul class="timeline-list muted">
+                <li>Data analysis and forensic-style technology scenarios in a professional context</li>
+                <li>Built a Tableau dashboard to communicate findings clearly to stakeholders</li>
+                <li>Used Excel to classify data and extract actionable business insights</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="experience-heading">Experience</h2>
+            <p class="muted">Internships where I contributed to shipping features, not shadow work.</p>
+          </div>
+          <div class="exp-grid">
+            <article class="exp-card reveal glass-panel">
+              <header class="exp-card__head">
+                <div>
+                  <h3 class="exp-card__title">Software Engineer Intern</h3>
+                  <p class="exp-card__company">Yuga Yatra Retail (OPC) Pvt. Ltd.</p>
+                </div>
+                <span class="exp-card__dates">Mar 2026 — May 2026</span>
+              </header>
+              <ul class="exp-card__list muted">
+                <li>Delivered frontend and backend tasks on a live codebase using modern web tooling</li>
+                <li>Partnered with the team to reproduce, isolate, and fix defects—improving stability and UX</li>
+                <li>Contributed to performance-minded changes through measurement and iterative refinement</li>
+              </ul>
+            </article>
+            <article class="exp-card reveal glass-panel">
+              <header class="exp-card__head">
+                <div>
+                  <h3 class="exp-card__title">Full Stack Development Intern</h3>
+                  <p class="exp-card__company">Sumago Infotech Pvt. Ltd.</p>
+                </div>
+                <span class="exp-card__dates">Dec 2024 — Feb 2025</span>
+              </header>
+              <ul class="exp-card__list muted">
+                <li>Built responsive UI flows for a food-delivery experience with HTML, CSS, JavaScript, and Bootstrap</li>
+                <li>Implemented server-side logic with Java, Servlets, and JSP; integrated MySQL for persistence</li>
+                <li>Validated APIs and endpoints with Postman to catch issues before they reached users</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="contact-heading">Contact</h2>
+            <p class="muted">Tell me about a role, a project, or a collaboration—I'll respond by email.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card reveal glass-panel">
+              <h3>Connect</h3>
+              <p class="muted">Email is fastest. GitHub and LinkedIn are below—no other channels listed here.</p>
+
+              <div class="socials" aria-label="Social links">
+                <a class="social" href="mailto:dikshasomwanshi24@gmail.com" aria-label="Email">
+                  <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 6h16v12H4z" />
+                      <path d="m4 7 8 6 8-6" />
+                    </svg>
+                  </span>
+                  <span>Email</span>
+                </a>
+                <a
+                  class="social"
+                  href="https://github.com/dikshu2004"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
+                  <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path
+                        d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.8 2.4 3.5 1.7.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-6a4.6 4.6 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17.8 4 18.8 4.3 18.8 4.3a4.3 4.3 0 0 1 .1 3.1 4.6 4.6 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"
+                      />
+                    </svg>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  class="social"
+                  href="https://www.linkedin.com/in/diksha-somwanshi-097809257"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path
+                        d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.33V9h3.42v1.56h.05c.48-.9 1.65-1.86 3.39-1.86 3.63 0 4.3 2.39 4.3 5.5v6.25ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45V9h3.56v11.45H3.56Z"
+                      />
+                    </svg>
+                  </span>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <form class="form-card form-card--premium reveal glass-panel" id="contactForm" novalidate>
+              <div class="form-head">
+                <h3>Send a message</h3>
+                <p class="muted" id="formHint">
+                  Powered by EmailJS. In <code class="inline-code">app.js</code>, set
+                  <code class="inline-code">EMAILJS_CONFIG.SERVICE_ID</code>,
+                  <code class="inline-code">TEMPLATE_ID</code>, and
+                  <code class="inline-code">PUBLIC_KEY</code> (replace
+                  <code class="inline-code">YOUR_*</code> placeholders). Template variables:
+                  <code class="inline-code">{{from_name}}</code>,
+                  <code class="inline-code">{{from_email}}</code>,
+                  <code class="inline-code">{{reply_to}}</code>,
+                  <code class="inline-code">{{message}}</code>,
+                  <code class="inline-code">{{to_name}}</code>.
+                </p>
+              </div>
+
+              <div class="field field-float">
+                <input
+                  id="msgName"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder=" "
+                  required
+                  minlength="2"
+                />
+                <label for="msgName">Your name</label>
+                <p class="error" id="errName" aria-live="polite"></p>
+              </div>
+
+              <div class="field field-float">
+                <input
+                  id="msgEmail"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder=" "
+                  required
+                />
+                <label for="msgEmail">Email address</label>
+                <p class="error" id="errEmail" aria-live="polite"></p>
+              </div>
+
+              <div class="field field-float field-float--textarea">
+                <textarea id="msgText" name="message" rows="5" placeholder=" " required minlength="10"></textarea>
+                <label for="msgText">Your message</label>
+                <p class="error" id="errText" aria-live="polite"></p>
+              </div>
+
+              <p class="error form-submit-error" id="formSubmitError" role="alert" aria-live="assertive"></p>
+
+              <div class="form-actions">
+                <button class="btn btn-submit-glow" type="submit" id="contactSubmitBtn">
+                  <span class="btn-text">Send message</span>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+                <button class="btn ghost" type="button" id="clearBtn">Clear</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> Diksha Somwanshi · Crafted with HTML, CSS &amp; JavaScript</p>
+        <div class="footer-actions">
+          <a class="muted" href="index">Back to Home</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="modal" id="projectModal" aria-label="Project details">
+      <form method="dialog" class="modal-shell glass-panel">
+        <button class="modal-x" aria-label="Close">×</button>
+        <div class="modal-body" id="modalBody"></div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog class="modal success-modal" id="contactSuccessModal" aria-labelledby="successModalTitle">
+      <div class="success-modal__panel glass-panel">
+        <button type="button" class="modal-x" id="successModalClose" aria-label="Close">×</button>
+        <div class="success-modal__icon" id="successModalIcon" aria-hidden="true">
+          <svg class="success-check-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="success-check-svg__ring" cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2.5" />
+            <path
+              class="success-check-svg__tick"
+              d="M20 33l8 8 16-18"
+              stroke="currentColor"
+              stroke-width="3.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3 class="success-modal__title" id="successModalTitle">Message sent successfully!</h3>
+        <p class="success-modal__sub muted">Thanks for reaching out—I’ll get back to you soon.</p>
+        <button type="button" class="btn success-modal__close-btn" id="successModalOk">Close</button>
+      </div>
+    </dialog>
+
+    <!-- EmailJS must load before app.js (contact form calls emailjs.init / emailjs.send) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
